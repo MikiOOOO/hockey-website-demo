@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hockey-website-demo/static/css/main.342a7035.css",
-    "main.js": "/hockey-website-demo/static/js/main.18bdb1f7.js",
+    "main.js": "/hockey-website-demo/static/js/main.4c99af42.js",
     "static/media/exchange.png": "/hockey-website-demo/static/media/exchange.ff38f88c2f84bb14bd2f.png",
     "static/media/agencja__reklamowa.svg": "/hockey-website-demo/static/media/agencja__reklamowa.a1dfcc1076b1556cee854095bea4f61f.svg",
     "static/media/koszulka__sponsor.png": "/hockey-website-demo/static/media/koszulka__sponsor.6b10d4bdfefe9eb17143.png",
@@ -60,10 +60,10 @@
     "static/media/left-switch-button.svg": "/hockey-website-demo/static/media/left-switch-button.867d7659902cebcb60193f1188161824.svg",
     "static/media/right-switch-button.svg": "/hockey-website-demo/static/media/right-switch-button.66b35a13ced5991a08a0f5feea33c6ae.svg",
     "main.342a7035.css.map": "/hockey-website-demo/static/css/main.342a7035.css.map",
-    "main.18bdb1f7.js.map": "/hockey-website-demo/static/js/main.18bdb1f7.js.map"
+    "main.4c99af42.js.map": "/hockey-website-demo/static/js/main.4c99af42.js.map"
   },
   "entrypoints": [
     "static/css/main.342a7035.css",
-    "static/js/main.18bdb1f7.js"
+    "static/js/main.4c99af42.js"
   ]
 }
