@@ -88,7 +88,9 @@ const EventDescription:React.FC<EventDescriptionProps> = ({event}) => {
           ))}
         </div>
         <button className="sign-up__button">
-          <Link to="./sing-up">zapisz sie</Link>
+          <Link to="/sign-up">
+            zapisz sie
+          </Link>
         </button>
       </div>
     </section>
