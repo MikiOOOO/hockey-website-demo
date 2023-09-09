@@ -1,0 +1,38 @@
+@import '../../../assets/variables/variables.scss';
+@import '../../../assets/variables/mixins.scss';
+
+.faqs {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 $base-distance;
+  box-sizing: content-box;
+
+  @include onDesktop {
+    max-width: 1000px;
+  }
+
+  &__title {
+    letter-spacing: 1px;
+    text-align: center;
+    padding: $distance-2 0; 
+    
+    @include onDesktop {
+      padding: $distance-4 0; 
+    }
+  } 
+
+  &__extra {
+    font-size: 13px;
+    font-weight: 700;
+    padding: $distance-2 0;
+    text-align: center;
+    &-link {
+      color: $accent-color;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

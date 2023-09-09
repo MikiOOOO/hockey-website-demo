@@ -1,0 +1,131 @@
+@import '../../../../assets/variables/variables.scss';
+@import '../../../../assets/variables/mixins.scss';
+
+@keyframes fadeIn{
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.50;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+.camp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $section-background-color;
+  max-width: 500px;
+
+ 
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+  }
+  
+  &__content {
+    box-shadow: 0px 3.009409189224243px 3.009409189224243px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+    border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      // border-color: $accent-color;
+      // transform: translateX(100%);
+      cursor: grab;
+    }
+    &-wrapper {
+      width: 100%;
+      background-color:$section-background-color-2;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    height: 90%;
+
+    background-color: $background-color;
+    z-index: 1;
+
+    
+   
+    &-title {
+      font-weight: 600;
+      font-size: $h-6-size;
+      display: block;
+      width: 100%;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: $distance-2;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: $main-font-color;
+      opacity: 0.9;
+      animation: fadeIn 2s ease-in-out;
+
+      @include onDesktop {
+        padding: $distance-1;
+      }
+    }
+
+    &-image {
+      // border-radius: 10px;
+      &-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+      }
+      // min-width: 320px;
+    }
+
+    &-description {
+      font-size: 13px;
+      text-align: left;
+      max-width: 50%;
+      font-weight: 400;
+    }
+    &-more {
+      // align-self: flex-start;
+      padding: $distance-1 0;
+      box-sizing: border-box;
+      width: 100%;
+      color: $accent-color;
+      font-size: $h-7-size;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &__decoration-image {
+    transition: 0.5s ease-in-out;
+    object-fit: scale-down;
+    margin: 48px auto;
+    &-wrapper {
+      position: relative;
+      height: 100%;
+      background-color: rgba(0, 136, 225, 0.05);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+ 
+}

@@ -1,0 +1,50 @@
+@import '../../assets/variables/variables.scss';
+@import '../../assets/variables/mixins.scss';
+
+.navbar-desktop {
+  
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $distance-1;
+  border-bottom: 1px solid $background-color;
+  background-color: $section-background-color;
+  height: 100%;
+  box-sizing: border-box;
+
+  &__list {
+    display: flex;
+    gap: 32px;
+ 
+  }
+
+  &__logo {
+    &-link {
+     height: $distance-3;
+    }
+  }
+
+  &__element, &__element > a {
+    font-weight: bold;
+    transition: 0.1s ease-in-out;
+    position: relative;
+
+    &:hover, &:active {
+      color: $accent-color;
+      cursor: pointer;
+
+      
+    &::after {
+      content: '';
+      border-bottom: 3px solid $accent-color;
+      position: absolute;
+      top: calc($distance-2 + 1em);
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+    }
+
+  }
+}

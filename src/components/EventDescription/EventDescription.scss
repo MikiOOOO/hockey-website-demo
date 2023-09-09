@@ -1,0 +1,185 @@
+@import '../../assets/variables/variables.scss';
+@import '../../assets/variables/mixins.scss';
+
+
+.event-description {
+  background-color: $background-color;
+ 
+
+  &__title {
+    // color: $accent-color;
+    font-size: $h-4-size;
+    text-transform: uppercase;
+    text-align: center;
+    padding: $distance-2;
+    letter-spacing: 1.5px;
+    @include onDesktop {
+      font-size: $h-3-size;
+    }
+  }
+
+  &__content {
+    &-wrapper {
+      width: 100%;
+      background-color: $section-background-color-2;
+    }
+    font-size: $h-7-size;
+    padding: $distance-2;
+
+    max-width: 500px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    @include onTablet {
+      font-size: $h-6-size;
+    }
+    @include onDesktop {
+      max-width: 800px;
+    }
+  }
+
+  &__social-links {
+    padding: $distance-2 0;
+    background-color: $background-color;
+    max-width: 500px;
+    margin: 0 auto;
+
+    @include onDesktop {
+      padding: $distance-3 0;
+      display: flex;
+      justify-content: space-between;
+      max-width: 800px;
+    }
+
+    &-title {
+      font-size: $h-7-size;
+      text-align: center;
+      margin-bottom: $distance-2;
+      @include onTablet {
+        font-size: $h-6-size;
+     
+      }
+      @include onDesktop {
+        margin-bottom: 0;
+      }
+    }
+    &-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $distance-1;
+      width: 100%;
+      @include onDesktop {
+        justify-content: flex-end;
+        width: auto;
+      }
+    }
+    &-icon {
+      width: $distance-2;
+      @include onTablet {
+        width: $distance-3;
+      }
+      &:hover {
+        fill: red;
+      }
+    }
+  }
+  &__carousel {
+    background-color: $section-background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    &-title {
+      font-size: $h-6-size;
+      font-weight: normal;
+
+      @include onTablet {
+        font-size: $h-5-size;
+      }
+
+      @include onDesktop {
+        font-size: $h-4-size;
+      }
+    }
+    &-switch {
+      &-buttons {
+        padding: $distance-2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      &-button {
+        &--left {
+          transform: rotate(180deg);
+        }
+        @include onTablet {
+          width: $distance-3;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &-images {
+      // margin-left: $distance-1 / 2;
+      overflow-x: hidden;
+      display: flex;
+      max-width: 100%;
+      justify-content: flex-start;
+  
+      align-items: center;
+      background-color: $section-background-color-2;
+    }
+
+    &-image {
+      min-width: 400px;
+      height: 230px;
+      
+      // background-color: $section-background-color-2;
+      transition: 0.3s ease-in-out;
+      @include onTablet {
+        padding: 0 $base-distance;
+      }
+      @include onDesktop {
+        // width: 33%;
+        // padding: 0 $distance-1;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $accent-color;
+      }
+    }
+  
+  }
+}
+.sign-up__button {
+  margin: $distance-2 0;
+  border: 2px solid transparent;
+  padding: $base-distance;
+  font-weight: bold;
+  background-color: $background-color;
+  font-size: $h-7-size;
+  text-align: right;
+  &:hover {
+    border-color: $accent-color;
+    color: $accent-color;
+  }
+
+  @include onTablet {
+    font-size: $h-6-size;
+  }
+}
+
+.sign-up__button > a {
+  display: block;
+  text-transform: uppercase;
+  height: 100%;
+  width: 100%;
+
+  &:hover {
+    color: $accent-color;
+  }
+}

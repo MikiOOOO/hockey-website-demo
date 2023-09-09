@@ -1,0 +1,39 @@
+@import '../../assets/variables/variables.scss';
+@import '../../assets/variables/mixins.scss';
+
+.contact-owner-data {
+  position: relative;
+
+  &__title {
+    padding: $base-distance;
+    font-size: $h-6-size;
+    margin-bottom: $distance-2;
+
+  }
+
+  &__person-details {
+   
+    &-wrapper {
+      @include onDesktop {
+        margin-top: $distance-2;
+      }
+      padding: $base-distance;
+      display: flex;
+      gap: $base-distance;
+    }
+    &-name {
+      font-size: $h-7-size;
+      &-additional-info {
+        margin-left: $base-distance;
+        font-size: $p-size;
+      }
+    }
+    
+  }
+  &__logo {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    right: 0;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../assets/variables/variables.scss';
+@import '../../assets/variables/mixins.scss';
+
+.footer {
+  padding: 10px;
+  display: flex;
+  font-size: 11px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  border-top: 1px solid $section-background-color;
+
+  &__wrapper {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__image {
+    width: 24px;
+
+  }
+}

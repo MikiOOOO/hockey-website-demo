@@ -1,0 +1,44 @@
+@import '../../../../assets/variables/variables.scss';
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__plus {
+    width: 20px;
+    &:hover {
+      cursor: pointer;
+      color: blue;
+    }
+  }
+
+  &__question {
+    font-size: 13px;
+    font-weight: 700;
+    &-wrapper {
+      border: 1px solid $section-background-color;
+      background-color: white;
+      margin-bottom: $base-distance;
+      padding: $base-distance;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__answer {
+    margin-bottom: $distance-1;
+    background-color: $section-background-color-2;
+    width: 100%;
+    font-size: 13px;
+    padding: $distance-2;
+    &-value {
+      // transform: translateX(-100%);
+      transition: 0.3s ease-in-out;
+      z-index: 2;
+    }
+  }
+}

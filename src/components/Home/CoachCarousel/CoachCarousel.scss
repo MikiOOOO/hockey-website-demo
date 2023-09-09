@@ -1,0 +1,53 @@
+@import '../../../assets/variables/variables.scss';
+@import '../../../assets/variables/mixins.scss';
+.carousel-section {
+  // height: 100vh;
+  width: 100%;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    text-align: center;
+    padding: $distance-2 0;
+
+    @include onDesktop {
+      padding: $distance-4 0;
+    }
+  }
+}
+
+.carousel {
+  background-color: $section-background-color-2;
+  display: flex;
+  align-items: center;
+  height: 500px;
+  // width: 100%;
+  justify-content: center;
+  &__switch {
+    height: 18px;
+    width: 18px;
+    @include onTablet {
+      height: 24px;
+      width: 24px;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+  &__switch--right {
+    margin-right: $distance-2;
+  }
+  &__switch--left {
+    margin-left: $distance-2 ;
+  }
+}
+
+.coach-cards {
+  display: flex;
+  overflow-x: hidden;
+  justify-content: flex-start;
+  transition: 0.3s;
+}

@@ -1,0 +1,45 @@
+@import '../../../assets/variables/variables.scss';
+@import '../../../assets/variables/mixins.scss';
+
+.tournament {
+  border: 1px solid $section-background-color;
+  background-color: $background-color;
+  padding: $distance-2 0 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease-in-out;
+  margin-bottom: $distance-2;
+  @include onDesktop {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    text-align: center;
+    // font-weight: 400;
+    font-size: $h-6-size;
+    text-transform: uppercase;
+  }
+  &__description {
+    font-size: 13px;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    &-link {
+      color:$accent-color;
+      padding: $base-distance;
+      width: 100%;
+      text-align: center;
+      display: block;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}

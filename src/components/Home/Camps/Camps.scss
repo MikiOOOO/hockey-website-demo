@@ -1,0 +1,28 @@
+@import '../../../assets/variables/variables.scss';
+@import '../../../assets/variables/mixins.scss';
+
+.camp-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $distance-2;
+
+  @media (min-width: 1024px) {
+
+    margin-bottom: $distance-12;
+    gap: 48px
+  }
+ 
+  &__title {
+    text-align: center;
+    padding: 24px 0;
+    font-size: $h-5-size;
+    border-bottom: 1px solid $section-background-color;
+    width: 100%;
+    margin-bottom: $distance-2;
+    @include onDesktop {
+      padding: $distance-4 0;
+    }
+  }
+}

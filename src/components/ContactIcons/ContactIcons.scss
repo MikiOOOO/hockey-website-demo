@@ -1,0 +1,61 @@
+@import '../../assets/variables/mixins.scss';
+@import '../../assets/variables/variables.scss';
+
+.contact-icons {
+  &__data {
+  
+    &-wrapper {
+      @media(min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+  
+      }
+    }
+  
+    &-value {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px;
+      font-size:10px;
+      @media(min-width: 1024px) {
+        font-size: $h-7-size;
+      }
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: $accent-color;
+        cursor: pointer;
+      }
+  
+      &-icon {
+        width: 20px;
+        height: 20px;
+        opacity: 0.95;
+       
+  
+        @media(min-width: 1024px) {
+          width: 28px;
+          height: 28px;
+        }
+      
+        &-wrapper {
+          border-radius: 50%;
+          background-color: $background-color;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+  
+      &-content {
+        font-weight: 700;
+      }
+  }
+  
+  
+  }
+  
+}

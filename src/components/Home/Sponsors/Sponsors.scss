@@ -1,0 +1,49 @@
+@import '../../../assets/variables/variables.scss';
+@import '../../../assets/variables/mixins.scss';
+.sponsors {
+  &__title {
+    font-weight: bold;
+  }
+  &__title, &__more {
+    background-color: $section-background-color;
+    padding: $distance-2;
+    text-align: center;
+
+    @include onDesktop {
+      padding: $distance-3;
+    }
+  }
+  &__more  > a{
+    color: $accent-color;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__carousel {
+    background-color: $white-color;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    
+    @include onDesktop {
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    padding: $base-distance;
+    min-width: 100%;
+    max-height: 50px;
+    transition: 2s ease-in-out;
+   
+    @include onTablet {
+      min-width: 30%;
+    }
+
+    @include onDesktop {
+      min-width: auto;
+      max-height: 60px;
+      padding: $base-distance $distance-2;
+    }
+  }
+}

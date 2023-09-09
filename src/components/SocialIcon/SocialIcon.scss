@@ -1,0 +1,11 @@
+@import '../../assets/variables/variables.scss';
+@import '../../assets/variables/mixins.scss';
+
+.social-link {
+  &__icon {
+    width: $distance-2;
+    @include onDesktop {
+      width: $distance-3;
+    }
+  }
+}

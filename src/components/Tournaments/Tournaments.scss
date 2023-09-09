@@ -1,0 +1,31 @@
+@import '../../assets//variables/variables.scss';
+@import '../../assets//variables/mixins.scss';
+
+.tournaments {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $distance-2;
+  @include onDesktop {
+    margin-bottom: $distance-4;
+  }
+  &__title {
+    padding: $distance-2 0;
+    text-align: center;
+    @include onDesktop {
+      padding: $distance-4 0;
+    }
+  }
+  &__wrapper {
+    background-color: $section-background-color-2;
+ 
+    @media(min-width: 1024px) {
+      display: flex;
+      gap: 48px;
+    }
+  }
+  @include onDesktop {
+    max-width: 1000px;
+  }
+}

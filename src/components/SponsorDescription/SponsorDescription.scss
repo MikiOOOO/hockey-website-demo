@@ -1,0 +1,88 @@
+@import '../../assets/variables/variables.scss';
+@import '../../assets/variables/mixins.scss';
+
+.sponsor-description {
+ 
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  
+  margin: 0 auto;
+  @include onDesktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "title title"
+    "paragraph image"
+    "paragraph image"
+    "button button";
+    transform: translateY(25%);
+    max-width: 1200px;
+    border: 1px solid $section-background-color;
+  }
+  &__title {
+    padding: $distance-2;
+    text-align: center;
+    grid-area: title;
+    @include onDesktop {
+      padding: $distance-4;
+      background-color: $section-background-color-2;
+    }
+  }
+  &__value {
+    padding: $base-distance;
+    text-align: center;
+
+  }
+  &__paragraph {
+    grid-area: paragraph;
+    &--list {
+      margin: $base-distance 1 * -$base-distance 0;
+      background-color: $section-background-color-2;
+      padding: $base-distance;
+      font-weight: 700;
+
+      @include onDesktop {
+        padding: $distance-2;
+      }
+     
+    }
+  }
+  &__image {
+    max-width: 100%;
+    margin-bottom: $base-distance;
+    grid-area: image;
+    align-self: stretch;
+    @include onDesktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contact {
+    &-button {
+      grid-area: button;
+      padding: $base-distance $distance-2;
+      box-sizing: border-box;
+      color: $main-font-color;
+      background-color: $background-color;
+      font-weight: 700;
+      margin-bottom: $base-distance;
+      align-self: center;
+      font-size: $h-7-size;
+      border: 1px solid $section-background-color;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        border-color:$accent-color ;
+        cursor: pointer;
+        color: $accent-color;
+      }
+     
+    }
+    &-link {
+      margin: 0 auto;
+    }
+  }
+}
+

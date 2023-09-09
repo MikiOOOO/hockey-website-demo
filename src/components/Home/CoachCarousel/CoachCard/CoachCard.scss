@@ -1,0 +1,95 @@
+@import '../../../../assets/variables/variables.scss';
+@import '../../../../assets/variables/mixins.scss';
+.coach-card {
+  &__wrapper {
+    user-select: none;
+    // padding: 0 $distance-2;
+    transition: 0.3s ease-in-out;
+    min-width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      cursor: grab;
+    }
+
+    @media (min-width: 414px) {
+      padding: 0 $base-distance;
+      min-width: 400px;
+    }
+  
+    @include onTablet {
+      padding: 0 $distance-1;
+      
+    }
+    @include onDesktop {
+      padding: 0 $distance-2;
+    }
+
+
+    align-items: center;
+  }
+  margin: 0 auto;
+  border: 2px solid $section-background-color;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  align-self: flex-end;
+  
+
+  &__name {
+    margin-top: 12px;
+  }
+
+ 
+
+  &__button {
+    border: none;
+    min-height: 40px;
+    background-color: whitesmoke;
+    color: $accent-color;
+    font-weight: bold;
+    width: 100%;
+
+    &:hover  {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    transform: translateY(-100%);
+    overflow-y: auto;
+    transition: 0.5s;
+    background-color: rgba(245, 245, 245, 0.5);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    // display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: $distance-4;
+    border-bottom: 2px solid transparent;
+    
+
+    &-value {
+      // transform: translateY(100%);
+      font-weight: bold;
+    }
+
+  }
+
+  &__photo {
+    user-select: none;
+  }
+}

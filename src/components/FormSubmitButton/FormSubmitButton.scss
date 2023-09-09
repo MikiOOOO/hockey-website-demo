@@ -1,0 +1,16 @@
+@import '../../assets/variables/variables.scss';
+
+.form-submit-button {
+  border: 1px solid transparent;
+  padding: $base-distance;
+  border-radius: 20px;
+  width: 150px;
+  background-color: $white-color;
+
+  &:hover {
+    cursor: pointer;
+    border-color: $accent-color;
+    color: $accent-color;
+    transition: 0.3s ease-in-out;
+  }
+}

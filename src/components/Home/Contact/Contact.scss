@@ -1,0 +1,68 @@
+@import '../../../assets/variables/variables.scss';
+
+.contact {
+  background-color: $section-background-color-2;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: $distance-2 auto;
+  padding: $distance-2 $base-distance;
+  box-sizing: border-box;
+
+  @media (min-width: 1024px) {
+    padding: $distance-3 $distance-1;
+    max-width: 1000px;
+    margin-bottom: $distance-4;
+  }
+
+  gap: 20px;
+  position: relative;
+  border: 1px solid $section-background-color;
+ 
+  &__title {
+    text-align: center;
+    
+    @media(min-width: 1024px) {
+      font-size: $h-5-size;
+    }
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    padding: 10px;
+    width: 35%;
+    height: 35%;
+  }
+  
+  &__button {
+    padding: 8px 16px;
+    box-sizing: border-box;
+    width: 125px;
+    color: $main-font-color;
+    background-color: $background-color;
+    border-radius: 30px;
+    font-weight: 700;
+    border: 1px solid transparent;
+    align-self: center;
+    display: block;
+    font-size: $h-7-size;
+    border: 1px solid $section-background-color;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      border-color:$accent-color ;
+      cursor: pointer;
+      color: $accent-color;
+    }
+
+  }
+}
+
+a{
+  align-self: center;
+
+}
